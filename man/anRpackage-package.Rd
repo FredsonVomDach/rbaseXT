@@ -1,24 +1,24 @@
-\name{anRpackage-package}
-\alias{anRpackage-package}
-\alias{anRpackage}
+\name{rbaseXT-package}
+\alias{rbaseXT-package}
+\alias{rbaseXT}
 \docType{package}
 \title{
-\packageTitle{anRpackage}
+\packageTitle{rbaseXT}
 }
 \description{
-\packageDescription{anRpackage}
+\packageDescription{rbaseXT}
 }
 \details{
 
 The DESCRIPTION file:
-\packageDESCRIPTION{anRpackage}
-\packageIndices{anRpackage}
+\packageDESCRIPTION{rbaseXT}
+\packageIndices{rbaseXT}
 ~~ An overview of how to use the package, including the most important functions ~~
 }
 \author{
-\packageAuthor{anRpackage}
+\packageAuthor{rbaseXT}
 
-Maintainer: \packageMaintainer{anRpackage}
+Maintainer: \packageMaintainer{rbaseXT}
 }
 \references{
 ~~ Literature or other references for background information ~~
