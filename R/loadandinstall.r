@@ -17,18 +17,18 @@ loadandinstall <- function(mypkg) {
     success <- tryCatch(
       {
         if (task=="install") {
-          install.packages(pck)
+          suppressWarnings(utils::install.packages(pck,quiet = TRUE))
         }
         if (task=="load") {
-          library(pck, character.only=TRUE)
+          library(pck, character.only=TRUE,quietly=TRUE)
         }
-        status=1
+        success=1
       },
       error=function(cond) {
-        status=0
+        success=0
       },
       warning=function(cond){
-        status=0
+        success=0
       }
     )    
     return(success)
@@ -41,7 +41,7 @@ loadandinstall <- function(mypkg) {
       success <- errorhandler(mypkg[i],task)
       if (success==0) {
         errors <- append(errors,mypkg[i])
-        #next() installation errors are not always catched, try to load as a next step
+        next()
       }
     }
     
@@ -58,7 +58,7 @@ loadandinstall <- function(mypkg) {
     }
   }
   if (!is.null(errors)) {
-    message("The were errors or warnings while installing or loading the follwing package(s)")
+    message("The were errors or warnings while installing or loading the following package(s)")
     return(unique(errors))
   }
 }
